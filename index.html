@@ -6,15 +6,53 @@
   <title>Salary Calculator</title>
 </head>
 <body>
+
   <header>
     <h1>Salary Calculator</h1>
   </header>
-  <main>
-    <h2>Add Employee</h2>
-    <h2>Employees</h2>
-  </main>
+  <div id="content">
+  <h2>Add Employee</h2>
+  <!-- * This application should have a form with five inputs that collect a new employee's 
+  *first name, last name, ID number, job title, annual salary*. -->
+
+  <form class="employee-form" onSubmit="submitForm(event)">
+    First Name: <input id="firstName-input" type="text" placeholder="Jane"/><br/>
+    Last Name: <input id="lastName-input" type="text" placeholder="Doe"/><br/>
+    ID number: <input id="idNumber-input" type="number" placeholder="012345"/><br/>
+    Annual Salary: <input id="annualSalary-input" type="number" placeholder="60000"/><br />
+    <input type="submitButton" value="Submit" />
+    <!-- <button data-testid="submitButton">
+      Submit
+    </button> -->
+</form>
+
+<table id="employees">
+<h2>Employees</h2>
+<p><h3>Total Monthly</h3></p>
+<thead>
+  <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>ID Number</th>
+      <th>Annual Salary</th>
+      <th>Monthly Cost</th>
+      <th>Delete</th>
+  </tr>
+</thead>
+<tbody id="employeeData">
+  <tr>
+      <td>Jane</td>
+      <td>Doe</td>
+      <td>012345</td>
+      <td>60000</td>
+      <td>5000</td>
+      <td><button onClick = "handleClickDelete(event)">Delete</button></td>
+
+  </tr>
   <footer>
-    <p>Total Monthly</p>
   </footer>
+  </tbody></div>
 </body>
+</html>
+</div>
 </html>
